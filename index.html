@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DHEER.EXE — Not Your Average Human | Official Portfolio</title>
+  <meta name="description" content="The definitive portfolio of Dheer. An ordinary human who underwent an extraordinary ursine evolution. Explore his corporate conquests, boardroom takeovers, and monsoon extractions." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="theme-default">
+
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing">
+    <span class="cursor-label" id="cursorLabel"></span>
+  </div>
+
+  <!-- Ambient Audio & Sound Synthesis State -->
+  <audio id="audioHum" loop preload="none"></audio>
+
+  <!-- Global Noise & Vignette Overlays -->
+  <div class="film-grain"></div>
+  <div class="ambient-glow" id="ambientGlow"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <a href="#hero" class="brand-link" id="brandLogo">
+        <span class="brand-pill">
+          <span class="pulse-dot"></span>
+          <span class="brand-version">DHEER.EXE [v2.4]</span>
+        </span>
+        <span class="brand-name">DHEER</span>
+      </a>
+
+      <nav class="desktop-nav" id="desktopNav">
+        <a href="#identity" class="nav-link"><span>01</span> Identity</a>
+        <a href="#archives" class="nav-link"><span>02</span> Archives</a>
+        <a href="#executive" class="nav-link"><span>03</span> Executive</a>
+        <a href="#operations" class="nav-link"><span>04</span> Field Ops</a>
+        <a href="#telemetry" class="nav-link"><span>05</span> Telemetry</a>
+        <a href="#reveal" class="nav-link"><span>06</span> The Reveal</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Audio Synth Toggle -->
+        <button class="icon-btn" id="audioToggle" title="Toggle Synthesizer Soundscape" aria-label="Toggle Sound">
+          <div class="equalizer-bars" id="eqBars">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </div>
+          <span class="btn-text">SFX: <span id="audioStateText">MUTED</span></span>
+        </button>
+
+        <!-- Tactical Night-Vision Toggle -->
+        <button class="pill-btn mode-btn" id="modeToggle" title="Switch Tactical Night Vision Mode">
+          <span class="mode-indicator"></span>
+          <span class="mode-text" id="modeText">NIGHT VISION</span>
+        </button>
+
+        <!-- Terminal CLI Launcher -->
+        <button class="icon-btn terminal-trigger" id="terminalTrigger" title="Open Dheer Terminal CLI">
+          <span class="terminal-prefix">>_</span>
+          <span class="btn-text">CLI</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-nav-links">
+      <a href="#identity" class="mobile-link"><span>// 01</span> Identity</a>
+      <a href="#archives" class="mobile-link"><span>// 02</span> Photographic Archives</a>
+      <a href="#executive" class="mobile-link"><span>// 03</span> Professional Panda</a>
+      <a href="#operations" class="mobile-link"><span>// 04</span> Tactical Operations</a>
+      <a href="#telemetry" class="mobile-link"><span>// 05</span> Panda Telemetry</a>
+      <a href="#reveal" class="mobile-link"><span>// 06</span> The Final Reveal</a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- SECTION 01: CINEMATIC HERO -->
+    <section class="section-hero" id="hero">
+      <div class="hero-backdrop-grid"></div>
+      
+      <!-- Top Telemetry Stream -->
+      <div class="hero-telemetry-strip">
+        <div class="strip-item"><span class="strip-dot"></span> OPERATING IN PANDA MODE (100%)</div>
+        <div class="strip-divider">/</div>
+        <div class="strip-item">JIRA COMMITS: 0</div>
+        <div class="strip-divider">/</div>
+        <div class="strip-item">CORE DIET: BAMBOO & COLD BREW</div>
+        <div class="strip-divider">/</div>
+        <div class="strip-item">STANDUP LOOMING FACTOR: 99.8%</div>
+        <div class="strip-divider">/</div>
+        <div class="strip-item">PONCHO STATUS: WATERPROOF</div>
+      </div>
+
+      <div class="hero-layout container">
+        <div class="hero-content">
+          <div class="hero-tag-badge">
+            <span class="status-indicator-live"></span>
+            <span>OFFICIAL DOSSIER // DECLASSIFIED 2026</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="title-line">NOT YOUR</span>
+            <span class="title-line highlight-text">AVERAGE</span>
+            <span class="title-line">HUMAN.</span>
+          </h1>
+
+          <p class="hero-lead">
+            An ordinary Homo sapiens who underwent an irreversible ursine transformation somewhere between a quarterly sprint refinement and a monsoon shower. Armed with acetate-frame spectacles, a blue <span class="text-white font-medium">"Professional Smart Choice"</span> tee, and razor-sharp bear claws on a Dell keyboard.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#archives" class="btn btn-primary" id="btnExploreArchives">
+              <span>Inspect The Evidence</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5M12 4v14"/></svg>
+            </a>
+            <button class="btn btn-secondary" id="btnDeployBamboo">
+              <span>Deploy Bamboo Ration 🎋</span>
+            </button>
+          </div>
+
+          <div class="hero-stats-mini">
+            <div class="mini-stat">
+              <span class="mini-number" id="bambooFeedCount">1,420</span>
+              <span class="mini-label">Stalks Consumed</span>
+            </div>
+            <div class="mini-stat-border"></div>
+            <div class="mini-stat">
+              <span class="mini-number">0</span>
+              <span class="mini-label">Bugs Acknowledged</span>
+            </div>
+            <div class="mini-stat-border"></div>
+            <div class="mini-stat">
+              <span class="mini-number">100%</span>
+              <span class="mini-label">Photogenic Index</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-wrapper">
+          <div class="hero-card-tilt" id="heroTiltCard">
+            <div class="hero-image-frame">
+              <img 
+                src="/photos/portrait-smart-choice.png" 
+                alt="Dheer smiling in his Professional Smart Choice tee with glasses" 
+                class="hero-img" 
+                loading="eager"
+              />
+              <div class="image-gradient-overlay"></div>
+              
+              <!-- Floating HUD Elements on Photo -->
+              <div class="photo-hud hud-top-left">
+                <span class="hud-code">REC // 4K 60FPS</span>
+                <span class="hud-target">[TARGET: DHEER]</span>
+              </div>
+              <div class="photo-hud hud-bottom-right">
+                <span class="hud-badge">OUTFIT: SMART CHOICE BLUE</span>
+                <span class="hud-sub">AC WALL FAN: OPTIMAL CIRCULATION</span>
+              </div>
+              <div class="photo-hud hud-bottom-left">
+                <span class="hud-claw-tag">BEAR CLAW: DEPLOYED ON DESK</span>
+              </div>
+            </div>
+            <div class="hero-card-caption">
+              <span class="caption-index">SPECIMEN #01</span>
+              <span class="caption-text">First day at the enterprise. The shirt made the choice for him.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scrolling Marquee Ticker -->
+      <div class="hero-marquee">
+        <div class="marquee-track">
+          <span class="marquee-item">★ NOT A MEME. A LIFESTYLE.</span>
+          <span class="marquee-item">★ 200 LBS OF PURE CORPORATE GRAVITAS</span>
+          <span class="marquee-item">★ DELL LAPTOP CERTIFIED WITH NON-RETRACTABLE CLAWS</span>
+          <span class="marquee-item">★ LUXURY VILLA RECONNAISSANCE SPECIALIST</span>
+          <span class="marquee-item">★ MONSOON EXTRACTION VIA PILLION TWO-WHEELER</span>
+          <span class="marquee-item">★ "ORIGINALS" POLO SHIRT — CANNOT BE REPLICATED</span>
+          <span class="marquee-item">★ NOT A MEME. A LIFESTYLE.</span>
+          <span class="marquee-item">★ 200 LBS OF PURE CORPORATE GRAVITAS</span>
+          <span class="marquee-item">★ DELL LAPTOP CERTIFIED WITH NON-RETRACTABLE CLAWS</span>
+          <span class="marquee-item">★ LUXURY VILLA RECONNAISSANCE SPECIALIST</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: THE IDENTITY -->
+    <section class="section-identity container" id="identity">
+      <div class="section-header-editorial">
+        <div class="section-num-tag">// 01. EXECUTIVE DOSSIER</div>
+        <h2 class="editorial-headline">The Man. The Myth.<br><span class="highlight-text">The Ursine Anomaly.</span></h2>
+        <div class="section-subtext">Deconstructing the paradox of a 6-foot giant panda navigating modern Indian capitalism.</div>
+      </div>
+
+      <div class="identity-grid">
+        <div class="identity-image-column">
+          <div class="editorial-frame photo-inspectable" data-photo="villa-inspection" data-title="Case #06: The Villa Groundskeeper & Sovereign Heir">
+            <img 
+              src="/photos/villa-inspection.png" 
+              alt="Dheer standing outside a luxury stone villa at night in white trousers and Originals polo" 
+              class="editorial-img"
+              loading="lazy"
+            />
+            <div class="editorial-corner-tag">VILLA RECON // 23:42 HRS</div>
+            <div class="editorial-img-caption">
+              <span class="badge-accent">EXHIBIT A</span>
+              <span>Notice the crisp cream trousers, clean white trainers, and espresso polo embroidered with "Originals". Standing on the flagstone garden path like he just closed a Series B funding round on the property.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="identity-bio-column">
+          <div class="bio-card">
+            <h3 class="bio-subhead">A BIOLOGICAL & CORPORATE DIVERGENCE</h3>
+            <p class="bio-para">
+              Eyewitness reports place Dheer somewhere between Bangalore glass skyscrapers and illuminated hillside luxury estates. While ordinary professionals grapple with Monday morning dread, Dheer strolls manicured garden pathways at midnight with hands casually tucked into tailored cream trousers, radiating the calm nonchalance of a sovereign real estate heir.
+            </p>
+            <p class="bio-para">
+              The brown polo shirt explicitly declares <span class="highlight-inline">"Originals"</span> across the chest. This is not merchandise; it is a legally binding disclaimer that this biological specimen cannot be duplicated or held liable for skipped standup meetings.
+            </p>
+            <p class="bio-para">
+              Notice the footwear: triple-white streetwear sneakers. This is a panda that has never set foot in an unpaved muddy wilderness, preferring temperature-controlled conference suites, flagstone courtyard paths, and high-speed Wi-Fi.
+            </p>
+
+            <div class="spec-sheet">
+              <div class="spec-row">
+                <span class="spec-label">CODENAME:</span>
+                <span class="spec-val">PROJECT DHEER (REV 2.4)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">CLASSIFICATION:</span>
+                <span class="spec-val">AILUROPODA MELANOLEUCA SAPIENS</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">OPTOMETRY:</span>
+                <span class="spec-val">ACETATE RECTANGULAR FRAMES (SNOUT-MOUNTED)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">SIGNATURE UNIFORM:</span>
+                <span class="spec-val">BEN 10 RACING TEE / "ORIGINALS" POLO / BRONZE PONCHO</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">NATURAL HABITAT:</span>
+                <span class="spec-val">EXECUTIVE BOARDROOMS & MOTORCYCLE PILLION SEATS</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">PRIMARY DEFENSE:</span>
+                <span class="spec-val">SILENT, UNBLINKING CUBICLE LOOMING</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: THE MANY LIVES OF DHEER (ALL 7 PHOTOGRAPHS SHOWCASE) -->
+    <section class="section-archives" id="archives">
+      <div class="container">
+        <div class="section-header-editorial">
+          <div class="section-num-tag">// 02. PHOTOGRAPHIC EVIDENCE ARCHIVE</div>
+          <h2 class="editorial-headline">The Many Lives Of Dheer.<br><span class="highlight-text">Seven Documented Encounters.</span></h2>
+          <div class="section-subtext">Click any artifact to enter forensic examination mode with EXIF analysis and tactical callouts.</div>
+        </div>
+
+        <!-- Filter Navigation -->
+        <div class="archive-filters" id="archiveFilters">
+          <button class="filter-btn active" data-filter="all">ALL RECORDS (7)</button>
+          <button class="filter-btn" data-filter="corporate">CORPORATE INFILTRATION (4)</button>
+          <button class="filter-btn" data-filter="operations">FIELD OPERATIONS (1)</button>
+          <button class="filter-btn" data-filter="estate">ESTATE & DIPLOMACY (2)</button>
+        </div>
+
+        <!-- Asymmetric Editorial Gallery Grid -->
+        <div class="archive-grid" id="archiveGrid">
+
+          <!-- PHOTO 1: PORTRAIT SMART CHOICE -->
+          <div class="archive-card card-tall" data-category="corporate" data-id="1">
+            <div class="card-media photo-inspectable" data-photo="portrait-smart-choice" data-title="Case #01: The 'Smart Choice' Induction">
+              <img src="/photos/portrait-smart-choice.png" alt="Dheer smiling in blue Professional Smart Choice tee with glasses" loading="lazy" />
+              <div class="card-overlay">
+                <span class="lens-tag">INSPECT ARTIFACT</span>
+              </div>
+              <span class="card-category-pill">CORPORATE</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-header">
+                <span class="card-ref">REF: DH-OFFICE-01</span>
+                <span class="card-loc">OPEN WORKSPACE</span>
+              </div>
+              <h3 class="card-title">The "Professional Smart Choice" Induction</h3>
+              <p class="card-description">
+                First day at the enterprise. The blue crewneck proudly proclaims <em>"PROFESSIONAL SMART CHOICE"</em> across the chest. IT provisioned a laptop without asking questions. HR noted: <em>"Great smile, distinct dental clarity, exceptionally furry forearms, zero red flags."</em> Oscillating wall-fan in the background ensures optimal fur aeration.
+              </p>
+              <div class="card-tags">
+                <span>#SmartChoice</span>
+                <span>#AcetateFrames</span>
+                <span>#WallFanCooling</span>
+                <span>#ClawOnDesk</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PHOTO 2: CUBICLE OVERLORD -->
+          <div class="archive-card card-wide" data-category="corporate" data-id="2">
+            <div class="card-media photo-inspectable" data-photo="cubicle-overlord" data-title="Case #02: The Cubicle Overlord & Sprint Hawk">
+              <img src="/photos/cubicle-overlord.png" alt="Dheer towering over office cubicle divider in black-and-cream jersey" loading="lazy" />
+              <div class="card-overlay">
+                <span class="lens-tag">INSPECT ARTIFACT</span>
+              </div>
+              <span class="card-category-pill">CORPORATE</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-header">
+                <span class="card-ref">REF: DH-OFFICE-02</span>
+                <span class="card-loc">BAY 4 // PARTITION 12</span>
+              </div>
+              <h3 class="card-title">The Cubicle Overlord & Sprint Standup Hawk</h3>
+              <p class="card-description">
+                Standing 6-foot-something over the cubicle divider in a black-and-cream Ben 10 racing-stripe tee. Rectangular glasses pushed down the bridge of the snout. Coworkers reported feeling a sudden drop in ambient room temperature. <em>"He hasn't blinked in 38 minutes. He's just watching the terminal compile."</em> Peer reviews rose by 400%.
+              </p>
+              <div class="card-tags">
+                <span>#CubicleLooming</span>
+                <span>#Ben10Jersey</span>
+                <span>#StandupInspection</span>
+                <span>#ZeroBlinks</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PHOTO 3: CROSS FUNCTIONAL MEETING -->
+          <div class="archive-card card-wide" data-category="corporate" data-id="3">
+            <div class="card-media photo-inspectable" data-photo="meeting-crossfunctional" data-title="Case #03: The Collaborative Illusion & Doughnut Vase">
+              <img src="/photos/meeting-crossfunctional.png" alt="Dheer in navy polo sitting at long conference table between two colleagues with laptops" loading="lazy" />
+              <div class="card-overlay">
+                <span class="lens-tag">INSPECT ARTIFACT</span>
+              </div>
+              <span class="card-category-pill">CORPORATE</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-header">
+                <span class="card-ref">REF: DH-OFFICE-03</span>
+                <span class="card-loc">CONFERENCE ROOM B</span>
+              </div>
+              <h3 class="card-title">The Collaborative Illusion & Ceramic Ring Vase</h3>
+              <p class="card-description">
+                Seated dead-center in the glass-walled conference suite between two senior engineers. On the table: a modern ceramic doughnut ring sculpture, tangled USB-C cables, leather pencil box, and half-empty water bottles. While the colleagues frantically troubleshoot client tickets, Dheer sits in a navy polo with white shoulder piping, massive paws folded peacefully, projecting absolute architectural wisdom.
+              </p>
+              <div class="card-tags">
+                <span>#ConferencePresence</span>
+                <span>#DoughnutVase</span>
+                <span>#WhitePipingPolo</span>
+                <span>#ZeroCommits</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PHOTO 4: BOARDROOM SOLO TAKEOVER -->
+          <div class="archive-card card-tall" data-category="corporate" data-id="4">
+            <div class="card-media photo-inspectable" data-photo="boardroom-solo" data-title="Case #04: The Hostile Boardroom Coup">
+              <img src="/photos/boardroom-solo.png" alt="Dheer sitting in boardroom holding black Dell laptop with claws under pendant lights" loading="lazy" />
+              <div class="card-overlay">
+                <span class="lens-tag">INSPECT ARTIFACT</span>
+              </div>
+              <span class="card-category-pill">CORPORATE</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-header">
+                <span class="card-ref">REF: DH-OFFICE-04</span>
+                <span class="card-loc">EXECUTIVE BOARDROOM</span>
+              </div>
+              <h3 class="card-title">The Hostile Boardroom Coup & Dell DN-5045</h3>
+              <p class="card-description">
+                Arrived at 7:30 AM before security opened the floor. Commandeered the high-back leather executive armchair under amber teardrop pendant lamps. Clutching a black Dell laptop sporting a bright orange <em>"DN"</em> inventory sticker, with bear claws gripping the screen edges. When questioned, he adjusted his spectacles and announced: <em>"The Q4 bamboo allocation has been re-budgeted."</em>
+              </p>
+              <div class="card-tags">
+                <span>#BoardroomCoup</span>
+                <span>#DellLaptop</span>
+                <span>#OrangeDNSticker</span>
+                <span>#ClawGrip</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PHOTO 5: TACTICAL MONSOON EXTRACTION -->
+          <div class="archive-card card-feature" data-category="operations" data-id="5">
+            <div class="card-media photo-inspectable" data-photo="monsoon-extraction" data-title="Case #05: Tactical Monsoon Extraction Protocol">
+              <img src="/photos/monsoon-extraction.png" alt="Dheer riding pillion in bronze rain poncho flashing peace sign behind friend in dirtbike helmet" loading="lazy" />
+              <div class="card-overlay">
+                <span class="lens-tag">INSPECT ARTIFACT</span>
+              </div>
+              <span class="card-category-pill highlight-pill">FIELD OPERATION</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-header">
+                <span class="card-ref">REF: DH-TACTICAL-01</span>
+                <span class="card-loc">SECURITY BOOM BARRIER // SECTOR 7</span>
+              </div>
+              <h3 class="card-title">Tactical Monsoon Extraction via Pillion Two-Wheeler</h3>
+              <p class="card-description">
+                Heavy monsoon downpour. Flash floods. Ride-hailing apps completely bricked. High command authorized emergency two-wheeler extraction. The pilot: friend in full-face motocross helmet and translucent neon raincoat. The passenger: Dheer cocooned in an industrial bronze garbage-bag poncho securely cinched under his snout with a white drawstring, flashing a confident peace sign with his black furry paw. Note the white sports watch over the fur: punctuality transcends precipitation.
+              </p>
+              <div class="card-tags">
+                <span>#MonsoonExtraction</span>
+                <span>#EmergencyPoncho</span>
+                <span>#DrawstringCinched</span>
+                <span>#PeaceSignFur</span>
+                <span>#WhiteSportsWatch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PHOTO 6: VILLA INSPECTION -->
+          <div class="archive-card card-tall" data-category="estate" data-id="6">
+            <div class="card-media photo-inspectable" data-photo="villa-inspection" data-title="Case #06: The Villa Groundskeeper & Sovereign Heir">
+              <img src="/photos/villa-inspection.png" alt="Dheer in brown Originals polo and white pants in front of luxury villa at night" loading="lazy" />
+              <div class="card-overlay">
+                <span class="lens-tag">INSPECT ARTIFACT</span>
+              </div>
+              <span class="card-category-pill">HIGH SOCIETY</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-header">
+                <span class="card-ref">REF: DH-ESTATE-01</span>
+                <span class="card-loc">HILLSIDE RETREAT // 23:42 HRS</span>
+              </div>
+              <h3 class="card-title">The Midnight Villa Grounds Reconnaissance</h3>
+              <p class="card-description">
+                Standing tall on the stone flagstone walkway in front of an illuminated two-story luxury stone villa draped in lush bougainvillea. Hands casually resting in cream trousers, spotless white kicks, espresso polo shirt marked <em>"Originals"</em>. The resort management initially wondered if a woodland creature had strayed onto the property; within 10 minutes, they offered him a welcome drink and complimentary late checkout.
+              </p>
+              <div class="card-tags">
+                <span>#VillaRecon</span>
+                <span>#OriginalsPolo</span>
+                <span>#CreamTrousers</span>
+                <span>#BollardLighting</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PHOTO 7: ENTOURAGE & HUMAN HANDLER -->
+          <div class="archive-card card-wide" data-category="estate" data-id="7">
+            <div class="card-media photo-inspectable" data-photo="entourage-diplomacy" data-title="Case #07: Inter-Species Diplomacy & Human Handler">
+              <img src="/photos/entourage-diplomacy.png" alt="Dheer with arm around bearded friend on villa lawn at night" loading="lazy" />
+              <div class="card-overlay">
+                <span class="lens-tag">INSPECT ARTIFACT</span>
+              </div>
+              <span class="card-category-pill">HIGH SOCIETY</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-meta-header">
+                <span class="card-ref">REF: DH-ESTATE-02</span>
+                <span class="card-loc">PRIVATE LAWNS</span>
+              </div>
+              <h3 class="card-title">Inter-Species Diplomacy & The Trusted Human Liaison</h3>
+              <p class="card-description">
+                Posing warmly on the villa lawn alongside his trusted human liaison and primary handler. A heavy black fur arm slung affectionately across his companion's shoulders. The white watch gleams against the midnight fur. Official communique: <em>"He handles the hotel reservations and drives through monsoons; in return, I do not audit his Git commit messages."</em> An ironclad partnership.
+              </p>
+              <div class="card-tags">
+                <span>#Entourage</span>
+                <span>#HumanHandler</span>
+                <span>#BespokeFriendship</span>
+                <span>#LuxuryHospitality</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 04: PROFESSIONAL PANDA (CORPORATE PORTFOLIO) -->
+    <section class="section-executive container" id="executive">
+      <div class="section-header-editorial">
+        <div class="section-num-tag">// 03. EXECUTIVE APPOINTMENT</div>
+        <h2 class="editorial-headline">The Professional Panda.<br><span class="highlight-text">Corporate Mastery Without A Single PR.</span></h2>
+        <div class="section-subtext">Presenting the enterprise credentials of the highest-ranking ursine executive in modern tech.</div>
+      </div>
+
+      <div class="executive-profile-box">
+        <div class="profile-masthead">
+          <div class="masthead-badge">C-SUITE DIRECTORY // RECORD #8841</div>
+          <div class="masthead-details">
+            <div class="detail-cell">
+              <span class="cell-label">DESIGNATION</span>
+              <span class="cell-val">CHIEF URSINE STRATEGIST (CUO)</span>
+            </div>
+            <div class="detail-cell">
+              <span class="cell-label">DEPARTMENT</span>
+              <span class="cell-val">PASSIVE WORKPLACE OBSERVATION</span>
+            </div>
+            <div class="detail-cell">
+              <span class="cell-label">BILLABLE RATE</span>
+              <span class="cell-val">48 KG BAMBOO / SPRINT</span>
+            </div>
+            <div class="detail-cell">
+              <span class="cell-label">JIRA STATUS</span>
+              <span class="cell-val text-green">PERPETUALLY "IN REVIEW"</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="executive-quote-banner">
+          <blockquote>
+            "If you wear black rectangular spectacles, dress in a polo that says 'Originals', and stare intensely over the cubicle partition, nobody will ever ask what your deliverables actually are."
+          </blockquote>
+          <cite>— Dheer, Chief Ursine Officer</cite>
+        </div>
+
+        <!-- Competency Matrix -->
+        <div class="competency-grid">
+          <div class="comp-card">
+            <div class="comp-header">
+              <span class="comp-title">Cubicle Looming Intimidation</span>
+              <span class="comp-score">99.8%</span>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="width: 99.8%;"></div>
+            </div>
+            <p class="comp-desc">Mastered the silent 20-minute standing stare behind junior engineers in the Ben 10 racing jersey until code compiles error-free.</p>
+          </div>
+
+          <div class="comp-card">
+            <div class="comp-header">
+              <span class="comp-title">Dell Trackpad Navigation via Claws</span>
+              <span class="comp-score">94.2%</span>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="width: 94.2%;"></div>
+            </div>
+            <p class="comp-desc">Exceptional accuracy operating Dell laptops (specifically model DN-5045) using non-retractable black bear claws without scratching screen.</p>
+          </div>
+
+          <div class="comp-card">
+            <div class="comp-header">
+              <span class="comp-title">Meeting Presence Without Uttering Words</span>
+              <span class="comp-score">100.0%</span>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="width: 100%;"></div>
+            </div>
+            <p class="comp-desc">Perfect attendance record across all sprint refinements. Sits calmly next to ceramic ring vases radiating unmatched authority.</p>
+          </div>
+
+          <div class="comp-card">
+            <div class="comp-header">
+              <span class="comp-title">Monsoon Rain Poncho Aerodynamics</span>
+              <span class="comp-score">14.3%</span>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="width: 14.3%;"></div>
+            </div>
+            <p class="comp-desc">Low aerodynamic coefficient on motorcycle pillion, heavily compensated by sheer swagger, drawstring tightness, and peace-sign delivery.</p>
+          </div>
+        </div>
+
+        <!-- Daily Executive Schedule -->
+        <div class="schedule-section">
+          <h3 class="schedule-heading">EXECUTIVE ITINERARY // A DAY IN THE LIFE</h3>
+          <div class="timeline-wrap">
+            <div class="timeline-step">
+              <span class="timeline-time">09:30 AM</span>
+              <div class="timeline-content">
+                <strong>Arrival & Wardrobe Selection:</strong> Select between the "Professional Smart Choice" blue tee or the Ben 10 racing-stripe jersey depending on sprint severity.
+              </div>
+            </div>
+            <div class="timeline-step">
+              <span class="timeline-time">10:30 AM</span>
+              <div class="timeline-content">
+                <strong>The Standup Loom:</strong> Station self directly behind cubicle partition #12. Adjust spectacles. Maintain silent eye contact with compiler logs.
+              </div>
+            </div>
+            <div class="timeline-step">
+              <span class="timeline-time">01:00 PM</span>
+              <div class="timeline-content">
+                <strong>Executive Catering Audit:</strong> Inspect vegetarian menu. Reject carrots; demand organic bamboo stalks and high-altitude espresso.
+              </div>
+            </div>
+            <div class="timeline-step">
+              <span class="timeline-time">03:30 PM</span>
+              <div class="timeline-content">
+                <strong>Boardroom Coup:</strong> Occupy corner leather swivel chair in executive suite. Clutch Dell laptop with claws. Mute all remote callers.
+              </div>
+            </div>
+            <div class="timeline-step">
+              <span class="timeline-time">06:00 PM</span>
+              <div class="timeline-content">
+                <strong>Tactical Extraction:</strong> Don bronze rain poncho, tie drawstring under snout, mount pillion seat, deploy peace sign into oncoming monsoon traffic.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05: FIELD OPERATIONS (TACTICAL MISSION LOGS) -->
+    <section class="section-operations container" id="operations">
+      <div class="section-header-editorial">
+        <div class="section-num-tag">// 04. FIELD OPERATIONS & TELEMETRY</div>
+        <h2 class="editorial-headline">Tactical Operations.<br><span class="highlight-text">Adventures In Severe Climes.</span></h2>
+        <div class="section-subtext">Declassified incident logs from monsoon extractions to high-society estate reconnaissance.</div>
+      </div>
+
+      <div class="tactical-grid">
+        <!-- OPERATION 1: MONSOON RUNNER -->
+        <div class="tactical-card">
+          <div class="tactical-badge">OPERATION: MONSOON RUNNER // CODE 99</div>
+          <div class="tactical-image photo-inspectable" data-photo="monsoon-extraction" data-title="Operation Monsoon Runner">
+            <img src="/photos/monsoon-extraction.png" alt="Rainy motorcycle ride with Dheer in poncho" loading="lazy" />
+            <div class="tactical-scanlines"></div>
+            <div class="tactical-hud-readout">GPS: 12.9716° N, 77.5946° E // PRECIPITATION: 96%</div>
+          </div>
+          <div class="tactical-body">
+            <h3 class="tactical-title">The Pillion Extraction Protocol</h3>
+            <ul class="tactical-details-list">
+              <li><strong>Target Objective:</strong> Evacuate Bangalore corporate corridor before water level surpasses motorcycle exhaust.</li>
+              <li><strong>Tactical Equipment:</strong> Industrial-grade bronze protective poncho, white drawstring chin lock, moisture-resistant acetate spectacles, white wristwatch over fur.</li>
+              <li><strong>Transport Unit:</strong> High-performance single-cylinder commuter bike, pilot equipped with full-face motocross helmet and neon plastic shroud.</li>
+              <li><strong>Debrief Note:</strong> Despite torrential monsoon turbulence, subject maintained 100% peace sign fidelity toward the camera lens. Mission declared an aesthetic masterpiece.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- OPERATION 2: VILLA NOCTURNE -->
+        <div class="tactical-card">
+          <div class="tactical-badge">OPERATION: VILLA NOCTURNE // CODE 07</div>
+          <div class="tactical-image photo-inspectable" data-photo="villa-inspection" data-title="Operation Villa Nocturne">
+            <img src="/photos/villa-inspection.png" alt="Dheer inspecting luxury villa at night" loading="lazy" />
+            <div class="tactical-scanlines"></div>
+            <div class="tactical-hud-readout">LOCATION: PRIVATE HILL RETREAT // TIME: 23:42 HRS</div>
+          </div>
+          <div class="tactical-body">
+            <h3 class="tactical-title">High-Society Nocturnal Reconnaissance</h3>
+            <ul class="tactical-details-list">
+              <li><strong>Target Objective:</strong> Verify firmness of luxury villa master suite and inspect garden bollard illumination.</li>
+              <li><strong>Tactical Attire:</strong> Triple-white clean trainers, ivory relaxed slacks, bespoke espresso polo with "Originals" certification patch.</li>
+              <li><strong>Stealth Metric:</strong> 1/10 (Ground floodlights illuminated entire 200lb ursine frame, but presence was so confident that security saluted).</li>
+              <li><strong>Debrief Note:</strong> Subject photographed with human liaison. Paws placed warmly on human shoulders. Peace treaty between human and panda species officially ratified.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06: PANDA STATISTICS & DIAGNOSTICS -->
+    <section class="section-telemetry" id="telemetry">
+      <div class="container">
+        <div class="section-header-editorial">
+          <div class="section-num-tag">// 05. SENSOR TELEMETRY & DIAGNOSTICS</div>
+          <h2 class="editorial-headline">Panda Telemetry.<br><span class="highlight-text">Live System Telemetry.</span></h2>
+          <div class="section-subtext">Real-time biological, behavioral, and operational readouts from the central Dheer mainframe.</div>
+        </div>
+
+        <!-- Animated Rolling Counters -->
+        <div class="counters-grid">
+          <div class="counter-box">
+            <div class="counter-val" data-target="100" data-suffix="%">0%</div>
+            <div class="counter-label">Panda Mode Activation</div>
+            <div class="counter-note">Operating at peak fluffiness & chill</div>
+          </div>
+
+          <div class="counter-box">
+            <div class="counter-val" data-target="0" data-suffix="">0</div>
+            <div class="counter-label">Pull Requests Committed</div>
+            <div class="counter-note">Why code when you can loom over cubicles?</div>
+          </div>
+
+          <div class="counter-box">
+            <div class="counter-val" data-target="4850" data-suffix="+">0</div>
+            <div class="counter-label">Hours Looking Deeply Busy</div>
+            <div class="counter-note">Acetate glasses + Dell laptop synergy</div>
+          </div>
+
+          <div class="counter-box">
+            <div class="counter-val" data-target="1" data-suffix="">0</div>
+            <div class="counter-label">Heavy-Duty Bronze Poncho</div>
+            <div class="counter-note">Indestructible monsoon protection</div>
+          </div>
+
+          <div class="counter-box">
+            <div class="counter-val" data-target="99" data-suffix=".9%">0%</div>
+            <div class="counter-label">Standup Intimidation Factor</div>
+            <div class="counter-note">Derived from Ben 10 racing jersey</div>
+          </div>
+
+          <div class="counter-box">
+            <div class="counter-val" data-target="999" data-suffix="k">0</div>
+            <div class="counter-label">Bamboo Demand Factor</div>
+            <div class="counter-note">Supply chain operating at critical threshold</div>
+          </div>
+        </div>
+
+        <!-- Interactive Diagnostic Terminal (Embedded) -->
+        <div class="terminal-container">
+          <div class="terminal-window">
+            <div class="terminal-bar">
+              <div class="term-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="term-title">DHEER-DIAGNOSTIC-SYS: bash - 80x24</div>
+              <div class="term-status">CONNECTED // tty1</div>
+            </div>
+            <div class="terminal-body" id="termBody">
+              <div class="term-output" id="termOutput">
+                <div class="term-line banner-line">===============================================================</div>
+                <div class="term-line banner-line">  DHEER.EXE URSINE MAINFRAME // FIRMWARE 2.4.0 (ARM64-PANDA)</div>
+                <div class="term-line banner-line">===============================================================</div>
+                <div class="term-line">Type '<span class="text-green">help</span>' to inspect available system commands.</div>
+                <div class="term-line">Try: <span class="text-accent">status</span>, <span class="text-accent">bamboo</span>, <span class="text-accent">poncho</span>, <span class="text-accent">laptop</span>, <span class="text-accent">villa</span>, <span class="text-accent">clear</span></div>
+              </div>
+              <div class="terminal-input-row">
+                <span class="term-prompt">dheer@mainframe:~$</span>
+                <input type="text" id="termInput" class="term-input" autocomplete="off" spellcheck="false" placeholder="Type a command..." />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 07: THE FINAL REVEAL & TRIBUTE -->
+    <section class="section-reveal container" id="reveal">
+      <div class="reveal-card">
+        <div class="reveal-inner">
+          <span class="reveal-kicker">// THE UNTOLD HUMAN EQUATION</span>
+          <h2 class="reveal-title">
+            "Behind every successful panda..."
+          </h2>
+          <div class="reveal-punchline">
+            "...is a bewildered human friend in a motorcycle helmet wondering how his life led to driving a 200-pound bear through the monsoon."
+          </div>
+
+          <!-- Side-by-side finale imagery -->
+          <div class="reveal-photos-duo">
+            <div class="reveal-photo-frame photo-inspectable" data-photo="entourage-diplomacy" data-title="Diplomatic Ties: The Bond That Transcends Species">
+              <img src="/photos/entourage-diplomacy.png" alt="Dheer and his human friend at the luxury villa" loading="lazy" />
+              <div class="photo-caption-mini">THE ALLIANCE: Estate grounds at midnight. Friendship sealed with high-thread-count polo shirts.</div>
+            </div>
+
+            <div class="reveal-photo-frame photo-inspectable" data-photo="monsoon-extraction" data-title="The Extraction: Through Thick Water and Thin Ponchos">
+              <img src="/photos/monsoon-extraction.png" alt="Monsoon motorcycle extraction" loading="lazy" />
+              <div class="photo-caption-mini">THE EXTRACTION: When the storm hits, brotherhood is tested at 45 km/h behind a boom barrier.</div>
+            </div>
+          </div>
+
+          <!-- Official Certificate of Authenticity -->
+          <div class="certificate-box">
+            <div class="cert-seal">
+              <svg viewBox="0 0 100 100" width="80" height="80">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#22c55e" stroke-width="2" stroke-dasharray="4 2"/>
+                <text x="50" y="45" text-anchor="middle" fill="#22c55e" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold">OFFICIAL SEAL</text>
+                <text x="50" y="58" text-anchor="middle" fill="#ffffff" font-family="'Space Grotesk', sans-serif" font-size="10" font-weight="bold">100% PANDA</text>
+                <text x="50" y="70" text-anchor="middle" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="7">DEPT OF URSINE</text>
+              </svg>
+            </div>
+            <div class="cert-text">
+              <h4>CERTIFICATE OF URSINE AUTHENTICITY</h4>
+              <p>This certifies that all photographs featured across this domain are non-fictional visual records of Dheer operating at peak executive capacity. No corporate policies were broken, no Dell laptops were harmed, and the bronze poncho remains available for future monsoon emergencies.</p>
+            </div>
+          </div>
+
+          <!-- Interactive Bamboo Feed Trigger -->
+          <div class="tribute-action-wrap">
+            <button class="btn btn-primary btn-large" id="btnBambooTribute">
+              <span>Send Dheer a Stalk of Bamboo 🎋</span>
+            </button>
+            <div class="bamboo-counter-feedback" id="bambooFeedback">
+              Bamboo sent! Dheer's current happiness index: <strong id="tributeCount">9,999</strong> stalks.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Luxury Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">DHEER.EXE</span>
+          <span class="footer-motto">An ordinary human. An extraordinary panda situation.</span>
+        </div>
+        <div class="footer-links-group">
+          <a href="#hero">Back To Top ↑</a>
+          <a href="#archives">Archives</a>
+          <a href="#executive">Executive</a>
+          <a href="#operations">Operations</a>
+          <a href="#telemetry">Telemetry</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 DHEER.EXE — ALL RIGHTS RESERVED. CODED WITH PURE VANILLA CRAFTSMANSHIP.
+        </div>
+        <div class="footer-disclaimer">
+          DISCLAIMER: DHEER RESERVES THE RIGHT TO LOOM OVER YOUR CUBICLE WITHOUT NOTICE.
+        </div>
+        <div class="footer-status-pill">
+          <span class="status-dot"></span>
+          <span>SYSTEM OPERATIONAL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL FOR DETAILED FORENSIC PHOTO INSPECTION -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+
+      <div class="lightbox-content-grid">
+        <div class="lightbox-media-column">
+          <div class="lightbox-img-wrapper" id="lightboxImgWrapper">
+            <img src="" alt="" id="lightboxImg" />
+            <div class="lightbox-scanner-line"></div>
+          </div>
+        </div>
+
+        <div class="lightbox-info-column">
+          <div class="lightbox-badge-row">
+            <span class="lightbox-badge" id="lightboxRef">REF: DH-FORENSIC</span>
+            <span class="lightbox-status" id="lightboxStatus">VERIFIED AUTHENTIC</span>
+          </div>
+
+          <h3 class="lightbox-title" id="lightboxTitle">Artifact Title</h3>
+          
+          <div class="lightbox-story" id="lightboxStory">
+            Detailed context description...
+          </div>
+
+          <div class="lightbox-callouts">
+            <h4 class="callouts-heading">FORENSIC OBSERVATIONS:</h4>
+            <ul class="callouts-list" id="lightboxCallouts">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+
+          <div class="lightbox-exif-grid">
+            <div class="exif-cell">
+              <span class="exif-k">TARGET</span>
+              <span class="exif-v" id="exifTarget">Dheer</span>
+            </div>
+            <div class="exif-cell">
+              <span class="exif-k">ATTIRE</span>
+              <span class="exif-v" id="exifAttire">Custom</span>
+            </div>
+            <div class="exif-cell">
+              <span class="exif-k">OPTOMETRY</span>
+              <span class="exif-v">Acetate Frames</span>
+            </div>
+            <div class="exif-cell">
+              <span class="exif-k">THREAT LEVEL</span>
+              <span class="exif-v text-green">Extremely Low</span>
+            </div>
+          </div>
+
+          <div class="lightbox-nav-buttons">
+            <button class="btn btn-secondary btn-sm" id="lightboxPrevBtn">← Previous Artifact</button>
+            <button class="btn btn-secondary btn-sm" id="lightboxNextBtn">Next Artifact →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
